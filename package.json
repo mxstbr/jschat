@@ -1,0 +1,25 @@
+{
+  "name": "p2chat",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "pushstate-server .",
+    "watchify": "watchify index.js -o bundle.js"
+  },
+  "keywords": [],
+  "author": "Max Stoiber <contact@mxstbr.com> (http://mxstbr.com/)",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^13.1.1",
+    "hyperlog": "^4.11.0",
+    "level-js": "^2.2.4",
+    "levelup": "^1.3.3",
+    "signalhub": "^4.8.0",
+    "webrtc-swarm": "^2.8.0"
+  },
+  "devDependencies": {
+    "pushstate-server": "^2.1.0",
+    "watchify": "^3.7.0"
+  }
+}
