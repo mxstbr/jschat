@@ -3,15 +3,21 @@
 	<head>
 		<meta charset="utf-8">
 		<title>p2p chat</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+		<link rel="stylesheet" href="/styles.css" />
 	</head>
 	<body>
-		<div id="hash"></div>
-		<h1>Messages</h1>
-		<div id="data"></div>
-		<label>
-			New message
-			<input type="text" id="input">
-		</label>
-		<script type="text/javascript" src="./bundle.js"></script>
+		<header class="logo">
+			<div class="logo__js">JS Chat</div>
+		</header>
+		<main class="chat">
+			<ul id="messages"></ul>
+			<input type="text" placeholder="Type a message" id="input">
+		</main>
+		<footer class="footer">
+			<p>made by <a href="https://twitter.com/mxstbr">@mxstbr</a></p>
+			<p>decentralized and peer-to-peer — why does this exist?</p>
+		</footer>
+		<script type="text/javascript" src="./dist/bundle.js"></script>
 	</body>
 </html>

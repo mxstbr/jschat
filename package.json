@@ -2,10 +2,15 @@
   "name": "p2chat",
   "version": "0.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "start": "pushstate-server .",
-    "watchify": "watchify index.js -o bundle.js"
+    "create-dist": "mkdir -p dist",
+    "prebuild": "npm run create-dist",
+    "build": "browserify src/index.js -o dist/bundle.js -t [ babelify ]",
+    "prewatchify": "npm run create-dist",
+    "watchify": "watchify src/index.js -o dist/bundle.js -t [ babelify ]",
+    "signalhub": "signalhub listen -p 9001"
   },
   "keywords": [],
   "author": "Max Stoiber <contact@mxstbr.com> (http://mxstbr.com/)",
@@ -19,6 +24,8 @@
     "webrtc-swarm": "^2.8.0"
   },
   "devDependencies": {
+    "babel-preset-latest": "^6.16.0",
+    "babelify": "^7.3.0",
     "pushstate-server": "^2.1.0",
     "watchify": "^3.7.0"
   }
